@@ -1,0 +1,73 @@
+@import './Landing';
+@import './Register';
+@import './Navbar';
+
+@import './DoctorSearch';
+@import './DoctorList';
+@import './Doctor';
+@import './DoctorDetail';
+@import './DoctorBooking';
+@import './BookingItem';
+@import './BookingForm';
+@import './BookingConfirm';
+@import './AdminPanel';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #29303a;
+}
+
+// Common Form styles
+.form-field {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+
+  label {
+    color: #47b7a7;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-left: 2rem;
+  }
+
+  input {
+    border: none;
+    background-color: white;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border: 1px solid rgba(172, 163, 163, 0.466);
+    border-radius: 500px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(172, 163, 163, 0.466);
+    border: 2px solid transparent;
+
+    &:focus {
+      border-color: #47b7a7;
+    }
+  }
+}
+
+.book-btn {
+  color: white;
+  width: 100%;
+  text-decoration: none;
+  background: linear-gradient(to right bottom, #47b7a7, #266a61);
+  border-radius: 100px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

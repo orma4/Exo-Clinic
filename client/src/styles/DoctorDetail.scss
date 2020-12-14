@@ -1,0 +1,151 @@
+.DoctorDetail {
+  text-align: center;
+
+  .detail-card {
+    background: linear-gradient(#266a61, #47b7a7);
+    padding: 3.5rem 1rem 0 1rem;
+    align-items: center;
+  }
+
+  .cta {
+    display: block;
+    border: 2px solid white;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+
+  .avatar {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    margin: 1rem 2rem;
+  }
+
+  .category {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .exp {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    justify-content: center;
+    margin-top: 2rem;
+    & > * {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 2px;
+    }
+  }
+
+  .tab {
+    border: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 2rem 2rem;
+    color: rgba(0, 0, 0, 0.548);
+    font-weight: bold;
+
+    &:focus {
+      outline: none;
+    }
+
+    &-focus {
+      border-bottom: 2px solid #47b7a7;
+      color: #47b7a7;
+    }
+
+    &-content {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &-information {
+    text-align: left;
+
+    .content {
+      margin-bottom: 2rem;
+      padding-left: 2rem;
+    }
+    h6 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    li {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: rgba(0, 0, 0, 0.459);
+    }
+  }
+
+  &-feedback {
+    text-align: left;
+
+    .content {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid rgba(114, 103, 103, 0.089);
+    }
+
+    .date {
+      margin-bottom: 0;
+      font-size: 1.2rem;
+      color: rgba(0, 0, 0, 0.288);
+    }
+
+    h6 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: rgba(0, 0, 0, 0.459);
+    }
+  }
+
+  &-clinic {
+    .phone {
+      font-size: 1.7rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .address {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.459);
+    }
+
+    .map {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .book-btn {
+    color: white;
+    width: 50%;
+    text-decoration: none;
+    background: linear-gradient(to right bottom, #47b7a7, #266a61);
+    border-radius: 100px;
+    padding: 1.5rem 1rem;
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}

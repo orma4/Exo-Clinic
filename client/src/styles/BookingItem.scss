@@ -1,0 +1,83 @@
+.BookingItem {
+  padding: 1.5rem;
+  border: 1px solid rgba(107, 107, 107, 0.144);
+  box-shadow: 4px 8px 16px rgba(107, 107, 107, 0.144);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  &-img {
+    width: 7rem;
+    height: 7rem;
+    img {
+      border-radius: 50%;
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+
+  &-info {
+    margin-left: 1.5rem;
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &-title {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+
+  &-category {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 0;
+  }
+
+  &-description {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &-exp {
+    font-size: 1.5rem;
+    font-weight: 500;
+    justify-content: space-around;
+    & > * {
+      margin-right: 2rem;
+    }
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 2px;
+    }
+  }
+
+  .book-info {
+    h6 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      font-weight: 500;
+      span {
+        font-weight: bold;
+      }
+    }
+
+    .book-time {
+      margin-bottom: 2rem;
+    }
+
+    a {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #47b7a7;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.Doctor {
+  padding: 1.5rem;
+  border: 1px solid rgba(107, 107, 107, 0.144);
+  box-shadow: 4px 8px 16px rgba(107, 107, 107, 0.144);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  &-img {
+    width: 7rem;
+    height: 7rem;
+    img {
+      border-radius: 50%;
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+
+  &-info {
+    margin-left: 1.5rem;
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &-title {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+
+  &-category {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 0;
+  }
+
+  &-description {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &-exp {
+    font-size: 1.5rem;
+    font-weight: 500;
+    justify-content: space-around;
+    & > * {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 2px;
+    }
+  }
+
+  a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #47b7a7;
+  }
+
+  &-cta {
+    margin-top: 2rem;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    padding: 8px 50px;
+    border-radius: 100px;
+    font-weight: bold;
+
+    &-border {
+      border-color: #47b7a7;
+      background-color: white;
+      color: #47b7a7;
+      margin-right: 5px;
+
+      &:hover {
+        color: darken($color: #47b7a7, $amount: 9);
+      }
+    }
+
+    &-full {
+      background-color: #47b7a7;
+      border-color: #47b7a7;
+      color: white;
+      margin-left: 5px;
+      &:hover {
+        background-color: darken($color: #47b7a7, $amount: 9);
+      }
+    }
+  }
+}

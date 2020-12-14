@@ -1,0 +1,10 @@
+.primary-bg{
+    background-image: linear-gradient(to bottom,#19D3AE,#0FCFEC);
+    height: 100vh;
+}
+li.navbar-nav{
+    padding: 5px 5px!important;
+}
+.pr-3, .px-3 {
+    padding-right: 6px!important;
+}

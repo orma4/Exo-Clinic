@@ -1,0 +1,31 @@
+h2{
+    font-weight: 800;
+}
+h1{
+    font-weight: 900!important;
+    font-size: 60px!important;
+    margin: 0!important;
+}
+h3{
+    font-weight: 900!important;
+    font-size: 25px!important;
+    margin: 0!important;
+}
+h4{
+    color:#1CC7C1;
+    font-weight: bolder;
+}
+tr{
+    border: 0;
+}
+#prescriptionTable thead th{
+    border: 0!important;
+    color: gray;
+}
+#prescriptionTable td, #prescriptionTable th, #prescriptionTable button{
+    border: 0!important;
+    font-weight: 800!important;
+}
+.primary-btn{
+    background-image: linear-gradient(45deg,#19D3AE,#0FCFEC);
+}

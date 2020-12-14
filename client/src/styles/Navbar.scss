@@ -1,0 +1,35 @@
+.Navbar {
+  height: 10rem;
+  padding: 3rem 1rem;
+
+  .left-icon {
+    width: 2rem;
+    height: 2rem;
+    margin: none;
+  }
+
+  .title,
+  a,
+  button {
+    color: #47b7a7;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 2rem;
+    align-self: center;
+  }
+
+  a,
+  button {
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($color: #47b7a7, $amount: 10);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.DoctorSearch {
+  position: relative;
+  text-align: center;
+
+  .search {
+    input {
+      border: none;
+      background-color: white;
+      width: 100%;
+      padding: 2rem;
+      border: 1px solid rgba(172, 163, 163, 0.466);
+      border-radius: 500px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      outline: none;
+      box-shadow: 2px 4px 8px rgba(172, 163, 163, 0.466);
+      margin-top: -3.5rem;
+      border: 2px solid transparent;
+
+      &:focus {
+        border-color: #47b7a7;
+      }
+    }
+  }
+
+  .logo {
+    width: 10rem;
+    height: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 1rem 4rem;
+  }
+
+  .category-btn {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 3rem;
+    color: #47b7a7;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #e0fdf7;
+    border: none;
+    box-shadow: 2px 4px 8px rgba(119, 112, 112, 0.438);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: darken($color: #e0fdf7, $amount: 10);
+    }
+  }
+}
