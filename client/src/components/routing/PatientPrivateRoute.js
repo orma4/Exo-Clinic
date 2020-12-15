@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 const PatientPrivateRoute = ({ component: Component, authenticated,user, ...rest }) => {
- 
+  console.log("patientroute")
   return (
     <div>
       {authenticated && (

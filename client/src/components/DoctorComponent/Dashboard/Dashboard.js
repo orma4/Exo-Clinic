@@ -13,7 +13,14 @@ import { clickedImage } from '../../../actions/doctorActions';
 import Sidebar from '../Sidebar/Sidebar';
 import AppNavbar from '../../AppNavbar';
 
+export function todayConvert() {
+    var dateString = new Date();
+    let month = dateString.toLocaleString('en-us', { month: 'short' });
+    var day = String(dateString.getDate());
+    return [month, parseInt(day)+",",dateString.getFullYear()].join(" ");
+}
 
+ 
 
 const Dashboard = ({appointments, getDoctorAppointments, user, columns, imageModal, clickedImage,location,patients}) => {
 	
@@ -51,14 +58,7 @@ const Dashboard = ({appointments, getDoctorAppointments, user, columns, imageMod
     const tableCallbacks = { image: imageClicked, email: getEmailLogo }
 
 
-    function todayConvert() {
-		var dateString = new Date();
-        let month = dateString.toLocaleString('en-us', { month: 'short' });
-        var day = String(dateString.getDate());
-		return [month, parseInt(day)+",",dateString.getFullYear()].join(" ");
-    }
-    
-     
+   
     const dateComapre = (date) => { 
         var today = todayConvert();
        console.log(date)

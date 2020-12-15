@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 const CombinedRoute = ({ component: Component, authenticated, ...rest }) => {
- 
+  console.log("combinedroute")
+
   return (
     <div>
       {authenticated && (

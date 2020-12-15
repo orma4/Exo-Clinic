@@ -62,7 +62,8 @@
     "redux-thunk": "^2.2.0",
     "sass": "^1.27.0",
     "thunk": "0.0.1",
-    "uuid": "^8.3.0"
+    "uuid": "^8.3.0",
+    "dotenv": "^8.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

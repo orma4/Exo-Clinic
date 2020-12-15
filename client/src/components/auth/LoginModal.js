@@ -76,20 +76,9 @@ class LoginModal extends Component {
             userType
 
         }
-
         //Attempt to login
         this.props.login(user);
-
-       
     };
-
-    // onClickHandle = (props) => {
-    //     // return <div>
-    //     //     <Redirect to="/zib" />
-    //     // </div>
-    //     this.props.history.push('/zib')
-       
-    // }
 
     render(){
         return(

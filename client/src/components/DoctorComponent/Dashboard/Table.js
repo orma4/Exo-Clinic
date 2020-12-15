@@ -17,7 +17,7 @@ export const Table = ({ rows, columns, imageModal, toggleModal, tableCallbacks, 
     var year = date.getFullYear();
     var month = date.getMonth();
     var day = String(date.getDate());
-
+    const res=[];
     const defaultValue = {
       year: year,
       month: month+1,
@@ -45,7 +45,7 @@ export const Table = ({ rows, columns, imageModal, toggleModal, tableCallbacks, 
       <Row>
         <Col sm={{ size: 10, offset: 1 }}>
           { rows.length > 0 && <PopUpAlert totalResults={ rows.length } />}
-          { currentLocation === "http://localhost:3000/doctorDashboard" &&
+          { currentLocation.includes("doctorDashboard") &&
           <div className="table-heading">
             <h1>Upcoming Appointments</h1>  
            <div className="st-date-picker">
@@ -62,8 +62,10 @@ export const Table = ({ rows, columns, imageModal, toggleModal, tableCallbacks, 
           </div>
           }  
 
-{ currentLocation === "http://localhost:3000/doctorAppointments" && 
-           <h1>Your Appointments Today</h1> 
+{currentLocation.includes("doctorAppointments") && 
+          
+           
+           (<h1>Your Appointments Today</h1> )
           }
           <ReactCollapsingTable columns={ columns }
                                 rows={ rows }

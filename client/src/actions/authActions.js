@@ -54,11 +54,11 @@ export const register = ({ name, email, password, userType, isFirstTime, isAppro
         type: REGISTER_SUCCESS,
         payload: res.data
     });
-   // localStorage.setItem('user', JSON.stringify(res.data.user));
+   
     localStorage.setItem('isLogged', true);
 })
     .catch(err => {
-       // localStorage.removeItem('user');
+       
         localStorage.setItem('isLogged', false);
         dispatch(returnErrors(err.response.data, err.response.status, 'REGISTER_FAIL'));
         dispatch({
@@ -89,12 +89,12 @@ export const login = ({email,password,userType}) => dispatch => {
         type: LOGIN_SUCCESS,
         payload: res.data
     });
-  // localStorage.setItem('user', JSON.stringify(res.data.user));
+  
    localStorage.setItem('isLogged', true);
 })
     .catch(err => {
         dispatch(returnErrors(err.response.data, err.response.status, 'LOGIN_FAIL'));
-      //  localStorage.removeItem('user');
+     
         localStorage.setItem('isLogged', false);
         dispatch({
             type: LOGIN_FAIL
@@ -106,7 +106,7 @@ export const login = ({email,password,userType}) => dispatch => {
 
 //Logout user
 export const logout = () => {
-    //localStorage.removeItem('user');
+    
     localStorage.removeItem('isLogged');
     return {
         type: LOGOUT_SUCCESS
@@ -123,7 +123,7 @@ export const updateDocState = user => (dispatch , getState) => {
             type: DOCTOR_REGISTRATION,
             payload: res.data
         });
-      //  localStorage.setItem('user', JSON.stringify(res.data));
+    
     })
     .catch(err => dispatch(returnErrors(err.response.data, err.response.status)));
  };
@@ -143,26 +143,11 @@ export const updateDocState = user => (dispatch , getState) => {
         type: UPDATE_PROFILE,
         payload: res.data
     });
-   // localStorage.setItem('user', JSON.stringify(res.data.user));
+ 
     localStorage.setItem('isLogged', true);
 })
     .catch(err => dispatch(setAlert(`${err}`, 'danger')));
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //Setup config/headers and token

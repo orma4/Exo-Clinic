@@ -115,7 +115,12 @@ class AppNavbar extends Component {
         <div>
             <Navbar color="dark" dark expand="sm" className="mb-5">
                 <Container>
-                    <NavbarBrand href="/">Happy Clinic</NavbarBrand>
+                    <NavbarBrand 
+                     to={{
+                        pathname: `/`,
+                        state: { user: this.props.auth.user },
+                      }}
+                    >Happy Clinic</NavbarBrand>
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>

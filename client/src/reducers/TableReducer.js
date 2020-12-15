@@ -1,5 +1,5 @@
 import InsertField from '../components/DoctorComponent/Dashboard/InsertField';
-import ExchangeLink from '../components/DoctorComponent/Dashboard/ExchangeLink';
+// import ExchangeLink from '../components/DoctorComponent/Dashboard/ExchangeLink';
 
 
 //Initial Data

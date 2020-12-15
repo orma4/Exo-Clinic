@@ -9,7 +9,8 @@ import AppNavbar from './AppNavbar'
 class HomePage extends Component {
    
      checkType = (userType) => {
-        console.log("userType")
+        console.log(userType)
+        console.log("inside")
         switch(userType){
             case "patient":
                 return <PatientPanel/>
@@ -22,7 +23,6 @@ class HomePage extends Component {
         }
     }
 
-
     render(){
         const {user} = this.props;
         const userType = (( user || {} ).userType || {})
@@ -30,14 +30,18 @@ class HomePage extends Component {
         return(
             <div>
                   <AppNavbar/>
-                  {console.log(userType)}
-                {localStorage.getItem('isLogged')  === "true" ? this.checkType(userType)
-                 :  <h4 className="mb-3 ml-4">Please Log in to manage account</h4> 
+                  {console.log(localStorage.getItem('isLogged'))}
+                  {user &&
+                    userType ? this.checkType(userType)
+                    :  <h4 className="mb-3 ml-4">Please Log in to manage account</h4> 
+                     
+                  
                 }
 
-                {/* { userType === "patient" ? 
+                 {/* { userType === "patient" ? 
                 <PatientPanel/>
-              :  userType ==='doctor' ? <DoctorPanel/> : userType ==='admin' ? <h4>admin</h4> : <h4 className="mb-3 ml-4">Please Log in to manage account</h4> }     */}
+              :  userType ==='doctor' ? <DoctorPanel/> : userType ==='admin' ? <h4>admin</h4> : 
+              <h4 className="mb-3 ml-4">Please Log in to manage account</h4> }  */}
             </div>
         )
     }

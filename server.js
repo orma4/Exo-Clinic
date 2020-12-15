@@ -19,7 +19,7 @@ app.use(fileUpload());
 
 //DB config
 
-const db=  process.env.MONGODB_URI;
+const db=  process.env.MONGODB_URI || config.get('mongoURI');
 console.log(db)
 //Connect to mongo
 mongoose.set('useFindAndModify', false);
