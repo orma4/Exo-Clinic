@@ -7,6 +7,7 @@ const http = require('http');
 var cors = require('cors');
 const bodyParser = require('body-parser');
 var xss = require("xss");
+require('dotenv/config')
 
 const app = express();
 
@@ -17,7 +18,8 @@ app.use(express.json());
 app.use(fileUpload());
 
 //DB config
-const db= config.get('mongoURI') || process.env.MONGODB_URI;
+
+const db=  process.env.MONGODB_URI;
 console.log(db)
 //Connect to mongo
 mongoose.set('useFindAndModify', false);

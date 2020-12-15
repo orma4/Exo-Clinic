@@ -5,6 +5,7 @@ const config = require('config');
 const jwt = require('jsonwebtoken');
 // User model
 const User = require('../../models/User');
+require('dotenv/config')
 
 // @route           POST api/users
 // @description:    register new user
@@ -45,7 +46,7 @@ router.post('/', (req,res) => {
 
                jwt.sign(
                   {id: user.id},
-                  config.get('jwtSecret'),
+                  process.env.jwtSecret,
                   {expiresIn: 3600},            //OPTIONAL!!!!!
                   (err,token) => {
                      if(err) throw err;
