@@ -18,17 +18,17 @@ const PatientBookings = ({appointments, getPatientAppointments,user, location}) 
     <div className="Bookings">
       <AppNavbar bg="#e0fdf7" title="Your Bookings" backBtn="/" />
       <div className="container"> 
-      {/* {appointments.length === 0 ?
-      <h1>You don't have any upcoming appointments!</h1> :
-
+     
       {appointments.map((appointment)=>
-        <BookingItem key={appointment._id} appointment={appointment}) />
-      } 
-    }
-       */}
+        (<BookingItem key={appointment._id} appointment={appointment}/>))  
+}
+{console.log("asd")}
+      {
         
+      !appointments.length &&
+      <h1>You don't have any upcoming appointments!</h1>
+      }
       
-            
       </div>
     </div>
   );
