@@ -22,7 +22,7 @@ const PatientBookings = ({appointments, getPatientAppointments,user, location}) 
       {appointments.map((appointment)=>
         (<BookingItem key={appointment._id} appointment={appointment}/>))  
 }
-{console.log("asd")}
+{/* {console.log("asd")} */}
       {
         
       !appointments.length &&
