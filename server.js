@@ -17,8 +17,8 @@ app.use(express.json());
 app.use(fileUpload());
 
 //DB config
-const db= config.get('mongoURI');
-
+const db= config.get('mongoURI') || process.env.MONGODB_URI;
+console.log(db)
 //Connect to mongo
 mongoose.set('useFindAndModify', false);
 mongoose.connect(db, { useCreateIndex: true, useUnifiedTopology: true ,  useNewUrlParser: true})
