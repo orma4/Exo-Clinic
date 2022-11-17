@@ -1,0 +1,64 @@
+.DoctorBooking {
+  .time {
+    background-color: #47b7a7;
+    padding: 3.5rem 1rem 3.5rem 1rem;
+
+    p {
+      font-size: 3.5rem;
+      font-weight: 500;
+      color: white;
+    }
+
+    &-picker {
+      width: 100%;
+    }
+  }
+
+  .book-btn {
+    color: white;
+    width: 50%;
+    text-decoration: none;
+    background: linear-gradient(to right bottom, #47b7a7, #266a61);
+    border-radius: 100px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 4rem;
+  }
+
+  .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    .title {
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+
+    .address,
+    .category {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+
+    .exp {
+      font-size: 1.5rem;
+      font-weight: 500;
+      justify-content: center;
+      margin-top: 1rem;
+      font-weight: bold;
+      & > * {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 2px;
+      }
+    }
+  }
+}

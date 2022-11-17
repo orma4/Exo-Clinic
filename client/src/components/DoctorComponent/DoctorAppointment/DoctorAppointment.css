@@ -1,0 +1,13 @@
+.select{
+    background-image: linear-gradient(to bottom,#19D3AE,#0FCFEC);
+}
+.select option {
+    background: rgba(15,207,236,100%);
+    font-size: 16px;
+    font-weight: 800;
+}
+.select{
+    font-size: 15px;
+    font-weight: 800;
+    border: none;
+}

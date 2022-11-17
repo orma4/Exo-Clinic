@@ -1,0 +1,204 @@
+@import './Landing';
+@import './Register';
+@import './AppNavbar';
+
+@import './DoctorSearch';
+@import './DoctorList';
+@import './Doctor';
+@import './DoctorDetail';
+@import './DoctorBooking';
+@import './BookingItem';
+@import './BookingForm';
+@import './BookingConfirm';
+// Import CoreUI styles
+@import "~@coreui/coreui/scss/coreui.scss";
+
+// Some temp fixes
+@import "fixes";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #29303a;
+}
+
+.form-field {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+
+  input {
+    border: none;
+    background-color: white;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border: 1px solid rgba(172, 163, 163, 0.466);
+    border-radius: 500px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(172, 163, 163, 0.466);
+    border: 2px solid transparent;
+
+    &:focus {
+      border-color: #47b7a7;
+    }
+  }
+}
+
+.book-btn {
+  color: white;
+  width: 100%;
+  text-decoration: none;
+  background: linear-gradient(to right bottom, #108dc7,#ef8e38);
+  border-radius: 200px;
+  padding: 0.3rem 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.h-text {
+// width: 100%;
+// height: 100vh;
+display: flex;
+align-items: top;
+justify-content: top;
+text-transform: uppercase;
+	background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font: {
+		size: 1vw;
+		family: Poppins;
+	};
+}
+
+.about-text {
+  // width: 100%;
+  // height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // text-transform: uppercase;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font: {
+      size: 1vw;
+      family: Poppins;
+    };
+    font-size: 52px;
+  }
+
+
+
+
+
+
+
+
+
+$lred:#E57373;
+$red:#F44336;
+
+@mixin transition($in) {
+	transition:$in;
+	-webkit-transition:$in;
+	-moz-transition:$in;
+	-o-transition:$in;
+	-ms-transition:$in;
+}
+
+
+#mmeennuu {
+	display:none;
+}
+
+#mmeennuu:checked ~ .menu {
+
+	width:340px;
+	border-radius:5px;
+	background-color:transparent;
+	border:3px solid $red;
+	height:165px;
+
+	&>ul {
+		display:block;
+		opacity:1;
+	}
+	&>.barry {
+		display:none;
+	}
+}
+
+.menu {
+	display:block;
+	width:100px;
+	height:100px;
+	background-color:$red;
+	border:3px solid transparent;
+	border-radius:50%;
+	overflow:hidden;
+	cursor:pointer;
+	@include transition(all 0.5s ease-in-out);
+
+	div.barry {
+		width:40px;
+		margin:35px auto;
+
+
+		.bar {
+			display:block;
+			width:100%;
+			height:5px;
+			margin-top:3px;
+			border-radius:2px;
+			background-color:#fff;
+		}
+	}
+
+	ul {
+		opacity:0;
+		display:none;
+		@include transition(all 0.5s ease-in-out);
+		list-style-type:none;
+		padding:0;
+		width:300px;
+		text-align:center;
+		margin-bottom: 0;
+
+		li {
+			display:inline-block;
+			a {
+				text-decoration:none;
+				display:inline-block;
+				padding:15px 25px;
+				color:black;
+				font-weight: bold;
+				font-size:20px;
+				@include transition(all 0.3s ease-in-out);
+				border:3px solid transparent;
+				border-radius:5px;
+
+				&:hover {
+					border-color:greenyellow;
+				}
+				
+				&:target {
+					border-bottom-color:greenyellow;
+				}
+			}
+		}
+	}
+}

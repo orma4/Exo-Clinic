@@ -1,0 +1,44 @@
+.DoctorSearch {
+  position: relative;
+  text-align: center;
+
+  .logo {
+    width: 10rem;
+    height: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 1rem 4rem;
+  }
+
+  .category-btn {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 4rem;
+    color: #476eb7;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-image: linear-gradient(#A1FFCE, #FAFFD1);
+    border: none;
+    box-shadow: 2px 4px 8px rgba(224, 17, 17, 0.438);
+
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: darken($color: #e0fdf7, $amount: 10);
+    }
+  }
+}

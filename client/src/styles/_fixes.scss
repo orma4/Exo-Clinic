@@ -1,0 +1,14 @@
+button {
+  &:disabled {
+    cursor: default;
+  }
+  &.disabled {
+    cursor: default;
+  }
+}
+
+.btn-brand:not(:only-child) {
+  .c-icon {
+    margin-top: 0 !important;
+  }
+}

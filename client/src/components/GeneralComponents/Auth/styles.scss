@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/kristoferjoseph/flexboxgrid@master/dist/flexboxgrid.min.css");
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+form,
+h2,
+strong {
+  color: rgb(87, 87, 87);
+}
+
+h2 {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+form {
+  background-color: rgb(255, 255, 255);
+  max-width: 500px;
+  border-radius: 5px;
+  text-align: left;
+  box-sizing: border-box;
+  box-shadow: 0 25px 70px rgba(34, 34, 34, 0.459);
+  margin: 50px auto;
+  > * {
+    padding: 15px;
+  }
+}
+
+#example-form {
+  max-width: 600px;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+}
+
+input,
+textarea {
+  &:not([type="checkbox"]):not([type="radio"]) {
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    display: block;
+  }
+  box-sizing: border-box;
+  outline: none;
+  background: rgb(238, 238, 238);
+  border: 1px solid rgb(238, 238, 238);
+  padding: 5px 15px;
+  transition: all 0.1s;
+
+  color: rgb(116, 116, 116);
+
+  &:focus {
+    border: 1px solid rgba(237, 165, 218, 1);
+    background: rgb(248, 248, 248);
+  }
+}
+
+label {
+  position: relative;
+
+  &.pending {
+    &:after {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      transform-origin: center center;
+      background-size: 15px;
+      animation: spin 1.5s infinite linear;
+      position: absolute;
+      right: 20px;
+      bottom: 25px;
+      border: 2px dotted rgb(151, 64, 6);
+      border-radius: 50%;
+    }
+  }
+
+  &.valid {
+    input {
+      border: 1px solid rgb(150, 212, 157);
+      background: rgb(248, 250, 247);
+    }
+  }
+
+  &.warning {
+    input {
+      border: 1px solid rgb(206, 175, 109);
+      background: rgb(243, 240, 233);
+      color: rgb(223, 172, 77);
+    }
+
+    color: rgb(223, 172, 77);
+  }
+
+  &.invalid {
+    input {
+      border: 1px solid rgb(206, 109, 109);
+      background: rgb(243, 233, 233);
+      color: rgb(223, 77, 77);
+    }
+
+    color: rgb(223, 77, 77);
+  }
+}
+
+.error-container {
+  text-align: right;
+  font-size: 12px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+strong {
+  padding-bottom: 5px;
+}
+
+label {
+  display: block;
+  padding-bottom: 15px;
+}
+
+.inline-labels label {
+  display: inline-block;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+footer {
+  text-align: right;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  font-size: 16px;
+  outline: none;
+  transition: 0.2s;
+}
+
+button.btn-submit {
+  color: white;
+  border-radius: 10px;
+  background: rgb(255,215,0);
+
+  &:hover {
+    background: rgb(218,165,32)
+  }
+
+  &:active {
+    background: rgb(209, 52, 99);
+    box-shadow: 0 0 5px rgba(237, 165, 218, 1);
+  }
+
+  &:disabled {
+    background: rgb(204, 204, 204);
+    cursor: default;
+  }
+}
+
+nav button {
+  background: none;
+  color: #222222;
+  border-bottom: 3px solid rgba(237, 165, 218, 1);
+  
+  &:hover {
+    border-bottom: 3px solid  rgb(245, 107, 148);
+  }
+
+  &.active {
+    border-bottom: 3px solid  rgb(209, 52, 99);
+  }
+  
+  &:last-child {
+    margin-left: 25px;
+  }
+}
