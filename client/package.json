@@ -62,7 +62,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "echo hi install doneeee"
+    "postinstall": "echo hi install done"
   },
   "proxy": "http://localhost:5000",
   "eslintConfig": {
