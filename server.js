@@ -161,5 +161,5 @@ io.on("connection", (socket) => {
   });
 });
 
-let port = process.env.PORT || 5000;
+let port = process.env.PORT || 3000;
 server.listen(port, () => console.log(`server started on port ${port}`));

@@ -11,6 +11,7 @@ require("dotenv/config");
 // const sendResetLink = require("../../models/sendEmail");
 
 const nodemailer = require("nodemailer");
+const port = process.env.PORT || 3000;
 
 const sendEmail = (options) => {
   //    var smtpConfig = {
@@ -70,7 +71,7 @@ router.post("/forgotpassword", async (req, res, next) => {
 
     // Create reset url to email to provided email
     if (process.env.NODE_ENV === "production") {
-      resetUrl = `https://beige-brown-bear-wrap.cyclic.app/verifyemail/${resetToken}`;
+      resetUrl = `https://exoclinic.cyclic.app/verifyemail/${resetToken}`;
     } else {
       resetUrl = `http://localhost:3000/verifyemail/${resetToken}`;
     }
@@ -203,7 +204,7 @@ router.post("/verify", async (req, res, next) => {
     var resetUrl = null;
     // Create verify url to email to provided email
     if (process.env.NODE_ENV === "production") {
-      resetUrl = `https://beige-brown-bear-wrap.cyclic.app/verifyemail/${verifyToken}`;
+      resetUrl = `https://exoclinic.cyclic.app/verifyemail/${verifyToken}`;
     } else {
       resetUrl = `http://localhost:3000/verifyemail/${verifyToken}`;
     }

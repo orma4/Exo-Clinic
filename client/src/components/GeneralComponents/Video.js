@@ -22,10 +22,12 @@ import DocumentsTab from "../PatientComponents/DocumentsTab";
 import { getUsers } from "../../actions/authActions";
 import ReportsHistorty from "../PatientComponents/ReportsHistorty";
 
+const port = process.env.PORT || 3000;
+
 const server_url =
   process.env.NODE_ENV === "production"
-    ? "https://beige-brown-bear-wrap.cyclic.app"
-    : "http://localhost:5000";
+    ? "https://exoclinic.cyclic.app/"
+    : `http://localhost:${port}`;
 
 var connections = {};
 const peerConnectionConfig = {
