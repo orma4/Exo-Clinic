@@ -20,17 +20,8 @@ app.use(express.urlencoded({ extended: true }));
 
 //DB config
 const db = process.env.MONGODB_URI;
-console.log(db);
 //Connect to mongo
 mongoose.set("useFindAndModify", false);
-mongoose
-  .connect(db, {
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-  })
-  .then(() => console.log("Connected to MongoDB!"))
-  .catch((err) => console.log(err));
 
 //use routes
 app.use("/api/users", require("./routes/api/users"));
@@ -162,4 +153,14 @@ io.on("connection", (socket) => {
 });
 
 let port = process.env.PORT || 3000;
-server.listen(port, () => console.log(`server started on port ${port}`));
+mongoose
+  .connect(db, {
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+  })
+  .then(() => {
+    console.log("Connected to MongoDB!");
+    server.listen(port, () => console.log(`server started on port ${port}`));
+  })
+  .catch((err) => console.log(err));
