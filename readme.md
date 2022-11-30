@@ -1,6 +1,6 @@
 # Exo Clinic - Online Doctor Consultation  [![CircleCI](https://circleci.com/gh/orma4/Exo-Clinic.svg?style=svg)](https://circleci.com/gh/orma4/Exo-Clinic)
 
-Live link:  https://exoclinic.herokuapp.com/
+Live link:  https://exoclinic.cyclic.app
 
 ## Tech Stack
 
